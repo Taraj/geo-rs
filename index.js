@@ -557,4 +557,5 @@ if (!nativeBinding) {
 }
 
 module.exports = nativeBinding
+module.exports.isPointOnLineFast = nativeBinding.isPointOnLineFast
 module.exports.plus100 = nativeBinding.plus100
