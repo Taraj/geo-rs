@@ -112,7 +112,7 @@ pub fn is_point_on_line_fast(
 
     // Obliczanie odległości punktu od odcinka
     let l2 = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
-    
+
     // ZMIANA: Usunięto let dist_sq; i zamieniono na wyrażenie
     let dist_sq = if l2 == 0.0 {
       // Segment jest pojedynczym punktem
