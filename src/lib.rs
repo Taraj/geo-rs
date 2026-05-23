@@ -112,19 +112,19 @@ pub fn is_point_on_line_fast(
 
     // Obliczanie odległości punktu od odcinka
     let l2 = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
-    let dist_sq;
-
-    if l2 == 0.0 {
+    
+    // ZMIANA: Usunięto let dist_sq; i zamieniono na wyrażenie
+    let dist_sq = if l2 == 0.0 {
       // Segment jest pojedynczym punktem
-      dist_sq = x1 * x1 + y1 * y1;
+      x1 * x1 + y1 * y1
     } else {
       // Rzutowanie punktu na odcinek z użyciem metody clamp zamiast Math.max/min
       let t = (((-x1) * (x2 - x1) + (-y1) * (y2 - y1)) / l2).clamp(0.0, 1.0);
 
       let proj_x = x1 + t * (x2 - x1);
       let proj_y = y1 + t * (y2 - y1);
-      dist_sq = proj_x * proj_x + proj_y * proj_y;
-    }
+      proj_x * proj_x + proj_y * proj_y
+    };
 
     // 3. Early Exit (Wczesne wyjście)
     if dist_sq <= margin_sq {
