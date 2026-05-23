@@ -1,6 +1,6 @@
 {
   "name": "@taraj/geo-rs",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
   "repository": {
