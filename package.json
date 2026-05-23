@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/napi-rs/package-template.git"
+    "url": "git+ssh://git@github.com/Taraj/geo-rs"
   },
   "license": "MIT",
   "keywords": [
